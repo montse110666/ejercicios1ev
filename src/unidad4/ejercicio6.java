@@ -14,7 +14,7 @@ public class ejercicio6 {
 	    int i=0;
 	    // Le damos a la variale "posiciones", el valor de la variable Random
 	    //que va a estar entre 10 y 50
-		posiciones=aleatorio.nextInt(50+10;
+		posiciones=aleatorio.nextInt(50-10)+10;
 		//Declaramos el array que se va a llamar vector y va a tener las posiciones 
 		//dadas por el valor de la variale random(posiciones)
 		int [] vector=new int[posiciones];

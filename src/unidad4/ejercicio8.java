@@ -15,30 +15,35 @@ public class ejercicio8 {
 		int j=0;
 		int suma=0;
 		int sumab=7;
+		int nosuma=0;
 		
 		while (posiciones<10 || posiciones>200) {
 			
 			System.out.println("Escribe las posiciones del vector: ");
 			posiciones=entrada.nextInt();
 		}
+		entrada.close();
 		int [] vector=new int[posiciones];
-		for (i=0; i<posiciones; i++) {
+		for (i=0; i<vector.length; i++) {
 			vector[i]=aleatorio.nextInt (200)-100;
 			System.out.print(vector[i] + " ");			
 		}
 		System.out.println();		
-		for (i=0; i<posiciones; i++) {
+		for (i=0; i<vector.length; i++) {
 			if (vector[i]==13){
 				System.out.println(vector[i]);
 				for (j=i; j<=i+13; i++) {
-					if (j==posiciones) j=i+13;
+					if (j==vector.length) j=i+13;
 					sumab+=vector[j];
+					
 				}
 				if (sumab==7) suma+=vector[i];
+				nosuma++;
 			}
 			else suma+=vector[i];
 		}
 		
 		System.out.println("La suma de los elementos del vector es: "+ suma);
+		System.out.println("los elementos sin sumar son: "+ nosuma );
 }
 }
